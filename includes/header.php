@@ -152,23 +152,23 @@ if (!isset($bodyClass)) {
 <!-- TopNavBar -->
 <nav class="sticky top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm">
     <div class="flex items-center justify-between px-margin-desktop py-4 max-w-7xl mx-auto">
-        <div class="text-headline-sm font-headline-sm font-bold text-primary">Smart Resale Store</div>
+        <a href="index.php" class="text-headline-sm font-headline-sm font-bold text-primary hover:opacity-80 transition-opacity">Smart Resale Store</a>
         <div class="hidden md:flex items-center gap-xl">
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="index.php">Home</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="sell.php">Sell an Item</a>
+            <a class="<?php echo getActiveClass('index.php'); ?> hover:text-primary transition-colors font-body-md text-body-md" href="index.php">Home</a>
+            <a class="<?php echo getActiveGroupClass(['category.php', 'furniture.php', 'furniture-category.php', 'fashion.php', 'books.php', 'sports.php', 'vehicles.php']); ?> hover:text-primary transition-colors font-body-md text-body-md" href="category.php">Browse</a>
+            <a class="<?php echo getActiveClass('sell.php'); ?> hover:text-primary transition-colors font-body-md text-body-md" href="sell.php">Sell an Item</a>
+            <a class="<?php echo getActiveClass('cart.php'); ?> hover:text-primary transition-colors font-body-md text-body-md" href="cart.php">Cart</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">How it Works</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Deals</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Blog</a>
             <a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Help</a>
         </div>
         <div class="flex items-center gap-md">
-            <button class="p-2 hover:bg-surface-container-low transition-all rounded-full"><span class="material-symbols-outlined">location_on</span></button>
-            <button class="p-2 hover:bg-surface-container-low transition-all rounded-full"><span class="material-symbols-outlined">favorite</span></button>
-            <button class="p-2 hover:bg-surface-container-low transition-all rounded-full relative">
+            <button class="p-2 hover:bg-surface-container-low transition-all rounded-full" title="Location"><span class="material-symbols-outlined">location_on</span></button>
+            <a href="checkout.php" class="p-2 hover:bg-surface-container-low transition-all rounded-full block" title="Favorites"><span class="material-symbols-outlined">favorite</span></a>
+            <a href="cart.php" class="p-2 hover:bg-surface-container-low transition-all rounded-full block relative" title="Shopping Cart">
                 <span class="material-symbols-outlined">shopping_cart</span>
                 <span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
-            </button>
-            <button class="p-2 hover:bg-surface-container-low transition-all rounded-full"><span class="material-symbols-outlined">person</span></button>
+            </a>
+            <a href="login.php" class="p-2 hover:bg-surface-container-low transition-all rounded-full block" title="Account"><span class="material-symbols-outlined">person</span></a>
         </div>
     </div>
 </nav>

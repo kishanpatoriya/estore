@@ -1,13 +1,13 @@
 <?php
 $categories = [
-    ['icon' => 'smartphone', 'label' => 'Mobiles'],
-    ['icon' => 'laptop_mac', 'label' => 'Electronics'],
-    ['icon' => 'chair', 'label' => 'Furniture'],
-    ['icon' => 'flatware', 'label' => 'Home'],
-    ['icon' => 'apparel', 'label' => 'Fashion'],
-    ['icon' => 'menu_book', 'label' => 'Books'],
-    ['icon' => 'fitness_center', 'label' => 'Sports'],
-    ['icon' => 'directions_car', 'label' => 'Vehicles'],
+    ['icon' => 'smartphone', 'label' => 'Mobiles', 'link' => 'category.php'],
+    ['icon' => 'laptop_mac', 'label' => 'Electronics', 'link' => 'category.php'],
+    ['icon' => 'chair', 'label' => 'Furniture', 'link' => 'furniture-category.php'],
+    ['icon' => 'flatware', 'label' => 'Home', 'link' => 'category.php'],
+    ['icon' => 'apparel', 'label' => 'Fashion', 'link' => 'fashion.php'],
+    ['icon' => 'menu_book', 'label' => 'Books', 'link' => 'books.php'],
+    ['icon' => 'fitness_center', 'label' => 'Sports', 'link' => 'sports.php'],
+    ['icon' => 'directions_car', 'label' => 'Vehicles', 'link' => 'vehicles.php'],
 ];
 
 $trustBadges = [
@@ -57,12 +57,12 @@ include __DIR__ . '/includes/header.php';
                     Experience the next generation of second-hand shopping. Premium verified items, seamless transactions, and a commitment to our planet.
                 </p>
 <div class="flex flex-wrap gap-md pt-base">
-<button class="px-8 py-4 bg-primary-container text-white rounded-xl font-label-md text-label-md hover:opacity-90 transition-all shadow-md">
+<a href="category.php" class="px-8 py-4 bg-primary-container text-white rounded-xl font-label-md text-label-md hover:opacity-90 transition-all shadow-md inline-block">
                         Shop Now
-                    </button>
-<button class="px-8 py-4 border-2 border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary/5 transition-all">
-                        Sale an Item
-                    </button>
+                    </a>
+<a href="sell.php" class="px-8 py-4 border-2 border-primary text-primary rounded-xl font-label-md text-label-md hover:bg-primary/5 transition-all inline-block">
+                        Sell an Item
+                    </a>
 </div>
 </div>
 <div class="relative h-[500px] w-full rounded-[24px] overflow-hidden bg-surface-container-low flex items-center justify-center">
@@ -92,16 +92,16 @@ include __DIR__ . '/includes/header.php';
 <section class="space-y-xl">
 <div class="flex items-center justify-between">
 <h2 class="font-headline-lg text-headline-lg">Top Categories</h2>
-<a class="text-primary font-label-md text-label-md hover:underline" href="#">View All Categories</a>
+<a class="text-primary font-label-md text-label-md hover:underline" href="category.php">View All Categories</a>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-md">
 <?php foreach ($categories as $category): ?>
-<div class="group cursor-pointer bg-white border border-outline-variant rounded-xl p-md text-center hover:border-primary hover:shadow-md transition-all">
+<a href="<?php echo $category['link']; ?>" class="group cursor-pointer bg-white border border-outline-variant rounded-xl p-md text-center hover:border-primary hover:shadow-md transition-all block">
 <div class="w-12 h-12 bg-surface-container mx-auto rounded-full flex items-center justify-center mb-sm group-hover:bg-primary/10 transition-colors text-on-surface-variant group-hover:text-primary">
 <span class="material-symbols-outlined"><?php echo $category['icon']; ?></span>
 </div>
 <span class="font-label-md text-label-md"><?php echo $category['label']; ?></span>
-</div>
+</a>
 <?php endforeach; ?>
 
 </section>
@@ -154,7 +154,7 @@ include __DIR__ . '/includes/header.php';
 <section class="space-y-xl">
 <div class="flex items-center justify-between">
 <h2 class="font-headline-lg text-headline-lg">Recently Added</h2>
-<button class="text-primary font-label-md text-label-md hover:underline">See All Recent</button>
+<a href="category.php" class="text-primary font-label-md text-label-md hover:underline">See All Recent</a>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
 <?php foreach ($recentItems as $item): ?>

@@ -1,153 +1,153 @@
 <?php
-// --- Mock Data ---
+// --- Mock Data for Sports Category ---
 
 $brands = [
-    ['name' => 'Sony', 'count' => 145, 'checked' => false],
-    ['name' => 'Samsung', 'count' => 178, 'checked' => false],
-    ['name' => 'Apple', 'count' => 92, 'checked' => false],
-    ['name' => 'Dell', 'count' => 67, 'checked' => false],
-    ['name' => 'HP', 'count' => 54, 'checked' => false],
-    ['name' => 'Canon', 'count' => 38, 'checked' => false],
+    ['name' => 'Hero Gear', 'count' => 167, 'checked' => false],
+    ['name' => 'Fitness Pro', 'count' => 189, 'checked' => false],
+    ['name' => 'Trek', 'count' => 143, 'checked' => false],
+    ['name' => 'Specialized', 'count' => 112, 'checked' => false],
+    ['name' => 'Fitbit', 'count' => 178, 'checked' => false],
+    ['name' => 'Pro Series', 'count' => 195, 'checked' => false],
 ];
 
 $conditions = [
-    ['name' => 'Like New', 'count' => 245, 'checked' => false],
-    ['name' => 'Good', 'count' => 312, 'checked' => false],
-    ['name' => 'Fair', 'count' => 89, 'checked' => false],
+    ['name' => 'Like New', 'count' => 334, 'checked' => false],
+    ['name' => 'Good', 'count' => 267, 'checked' => false],
+    ['name' => 'Fair', 'count' => 145, 'checked' => false],
 ];
 
 $products = [
     [
-        'title' => 'Sony Mirrorless Camera Alpha',
-        'image' => 'https://images.unsplash.com/photo-1606986628025-35d57e735ae0?auto=format&fit=crop&w=400&q=80',
+        'title' => 'Hero Gear Cycle',
+        'image' => 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Like New',
+        'condition_style' => 'bg-green-100 text-green-700',
+        'distance' => '1.3 km away',
+        'location' => 'San Francisco, CA',
+        'price' => '$899',
+        'old_price' => '$1,899',
+        'discount' => '53% OFF'
+    ],
+    [
+        'title' => 'Urban Commute...',
+        'image' => 'https://images.unsplash.com/photo-1540381494835-94cae50b8313?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Good',
+        'condition_style' => 'bg-gray-100 text-gray-600',
+        'distance' => '0.6 km away',
+        'location' => 'New York, NY',
+        'price' => '$450',
+        'old_price' => '$995',
+        'discount' => '55% OFF'
+    ],
+    [
+        'title' => 'Pro Fitness Track...',
+        'image' => 'https://images.unsplash.com/photo-1575992618886-490a78b8dd4c?auto=format&fit=crop&w=400&q=80',
         'condition' => 'Like New',
         'condition_style' => 'bg-green-100 text-green-700',
         'distance' => '2.4 km away',
-        'location' => 'San Francisco, USA',
-        'price' => '₹64,999',
-        'old_price' => '₹1,24,999',
-        'discount' => '48% OFF'
-    ],
-    [
-        'title' => 'Dell Inspiron 15 Laptop',
-        'image' => 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Good',
-        'condition_style' => 'bg-gray-100 text-gray-600',
-        'distance' => '3.2 km away',
-        'location' => 'New York, USA',
-        'price' => '₹45,999',
-        'old_price' => '₹89,999',
-        'discount' => '49% OFF'
-    ],
-    [
-        'title' => 'Matte Black Audio Headphones',
-        'image' => 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Like New',
-        'condition_style' => 'bg-green-100 text-green-700',
-        'distance' => '0.8 km away',
-        'location' => 'Chicago, USA',
-        'price' => '₹8,499',
-        'old_price' => '₹21,999',
-        'discount' => '61% OFF'
-    ],
-    [
-        'title' => 'Creative Series Tablet 11"',
-        'image' => 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Good',
-        'condition_style' => 'bg-gray-100 text-gray-600',
-        'distance' => '1.5 km away',
-        'location' => 'Los Angeles, USA',
-        'price' => '₹34,999',
-        'old_price' => '₹72,999',
-        'discount' => '52% OFF'
-    ],
-    [
-        'title' => 'Smart Monitor 27" 4K HDR',
-        'image' => 'https://images.unsplash.com/photo-1559056199-641a0ac8b3f7?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Like New',
-        'condition_style' => 'bg-green-100 text-green-700',
-        'distance' => '5.0 km away',
-        'location' => 'Seattle, USA',
-        'price' => '₹28,999',
-        'old_price' => '₹59,999',
-        'discount' => '52% OFF'
-    ],
-    [
-        'title' => 'Custom Mechanical Keyboard RGB',
-        'image' => 'https://images.unsplash.com/photo-1587829191301-e01a5ad74e71?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Like New',
-        'condition_style' => 'bg-green-100 text-green-700',
-        'distance' => '4.0 km away',
-        'location' => 'Boston, USA',
-        'price' => '₹11,999',
-        'old_price' => '₹28,999',
-        'discount' => '59% OFF'
-    ],
-    [
-        'title' => 'Canon DSLR Professional Camera',
-        'image' => 'https://images.unsplash.com/photo-1611532736579-6b16e2b50449?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Good',
-        'condition_style' => 'bg-gray-100 text-gray-600',
-        'distance' => '2.2 km away',
-        'location' => 'Portland, USA',
-        'price' => '₹52,999',
-        'old_price' => '₹1,15,000',
-        'discount' => '54% OFF'
-    ],
-    [
-        'title' => 'Samsung 65" Smart TV 4K UHD',
-        'image' => 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=400&q=80',
-        'condition' => 'Like New',
-        'condition_style' => 'bg-green-100 text-green-700',
-        'distance' => '1.8 km away',
-        'location' => 'Austin, USA',
-        'price' => '₹35,999',
-        'old_price' => '₹89,999',
+        'location' => 'Los Angeles, CA',
+        'price' => '$120',
+        'old_price' => '$299',
         'discount' => '60% OFF'
     ],
     [
-        'title' => 'HP Office Printer Multifunction',
-        'image' => 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=400&q=80',
+        'title' => 'Home Gym...',
+        'image' => 'https://images.unsplash.com/photo-1554284649-09b35a4f37a9?auto=format&fit=crop&w=400&q=80',
         'condition' => 'Good',
         'condition_style' => 'bg-gray-100 text-gray-600',
-        'distance' => '3.5 km away',
-        'location' => 'Miami, USA',
-        'price' => '₹14,999',
-        'old_price' => '₹34,999',
+        'distance' => '3.2 km away',
+        'location' => 'Chicago, IL',
+        'price' => '$1,200',
+        'old_price' => '$2,899',
+        'discount' => '59% OFF'
+    ],
+    [
+        'title' => 'Wilson Carbon...',
+        'image' => 'https://images.unsplash.com/photo-1567958920673-e5a75d63dc63?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Like New',
+        'condition_style' => 'bg-green-100 text-green-700',
+        'distance' => '1.7 km away',
+        'location' => 'Boston, MA',
+        'price' => '$320',
+        'old_price' => '$589',
+        'discount' => '46% OFF'
+    ],
+    [
+        'title' => 'Expedition 4-...',
+        'image' => 'https://images.unsplash.com/photo-1478891143333-dbb3f6b2b9b9?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Good',
+        'condition_style' => 'bg-gray-100 text-gray-600',
+        'distance' => '2.9 km away',
+        'location' => 'Denver, CO',
+        'price' => '$210',
+        'old_price' => '$489',
         'discount' => '57% OFF'
     ],
     [
-        'title' => 'Apple AirPods Pro Max',
-        'image' => 'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=400&q=80',
+        'title' => 'Yoga Mat Premium',
+        'image' => 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80',
         'condition' => 'Like New',
         'condition_style' => 'bg-green-100 text-green-700',
-        'distance' => '2.5 km away',
-        'location' => 'Denver, USA',
-        'price' => '₹39,999',
-        'old_price' => '₹54,900',
-        'discount' => '27% OFF'
+        'distance' => '4.1 km away',
+        'location' => 'Seattle, WA',
+        'price' => '$45',
+        'old_price' => '$120',
+        'discount' => '63% OFF'
     ],
     [
-        'title' => 'Sony WH-1000XM5 Headphones',
-        'image' => 'https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=400&q=80',
+        'title' => 'Basketball Hoop',
+        'image' => 'https://images.unsplash.com/photo-1622744406400-88f69f1f6d14?auto=format&fit=crop&w=400&q=80',
         'condition' => 'Good',
         'condition_style' => 'bg-gray-100 text-gray-600',
-        'distance' => '1.9 km away',
-        'location' => 'Atlanta, USA',
-        'price' => '₹24,999',
-        'old_price' => '₹49,990',
-        'discount' => '50% OFF'
+        'distance' => '1.5 km away',
+        'location' => 'Miami, FL',
+        'price' => '$175',
+        'old_price' => '$399',
+        'discount' => '56% OFF'
     ],
     [
-        'title' => 'Logitech Webcam Pro 4K',
-        'image' => 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=400&q=80',
+        'title' => 'Camping Tent 4-Person',
+        'image' => 'https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=400&q=80',
         'condition' => 'Like New',
         'condition_style' => 'bg-green-100 text-green-700',
-        'distance' => '4.2 km away',
-        'location' => 'Phoenix, USA',
-        'price' => '₹8,999',
-        'old_price' => '₹22,000',
+        'distance' => '2.6 km away',
+        'location' => 'Austin, TX',
+        'price' => '$185',
+        'old_price' => '$450',
         'discount' => '59% OFF'
+    ],
+    [
+        'title' => 'Running Shoes Pro',
+        'image' => 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Good',
+        'condition_style' => 'bg-gray-100 text-gray-600',
+        'distance' => '3.3 km away',
+        'location' => 'Phoenix, AZ',
+        'price' => '$89',
+        'old_price' => '$220',
+        'discount' => '60% OFF'
+    ],
+    [
+        'title' => 'Skateboard Complete',
+        'image' => 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Like New',
+        'condition_style' => 'bg-green-100 text-green-700',
+        'distance' => '1.2 km away',
+        'location' => 'Portland, OR',
+        'price' => '$78',
+        'old_price' => '$189',
+        'discount' => '59% OFF'
+    ],
+    [
+        'title' => 'Swimming Goggles Set',
+        'image' => 'https://images.unsplash.com/photo-1609005354830-abc2b670ec52?auto=format&fit=crop&w=400&q=80',
+        'condition' => 'Good',
+        'condition_style' => 'bg-gray-100 text-gray-600',
+        'distance' => '2.8 km away',
+        'location' => 'Philadelphia, PA',
+        'price' => '$32',
+        'old_price' => '$85',
+        'discount' => '62% OFF'
     ],
 ];
 ?>
@@ -156,7 +156,7 @@ $products = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReSell Store - Electronics</title>
+    <title>ReSell Store - Sports</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -179,7 +179,6 @@ $products = [
         }
     </script>
     <style>
-        /* Custom styling for the range slider to match the screenshot */
         input[type=range]::-webkit-slider-thumb {
             -webkit-appearance: none;
             height: 16px;
@@ -252,7 +251,7 @@ $products = [
             <ol class="flex items-center space-x-2">
                 <li><a href="index.php" class="hover:text-gray-900">Home</a></li>
                 <li><span class="mx-1">&gt;</span></li>
-                <li class="font-semibold text-brand">Electronics</li>
+                <li class="font-semibold text-brand">Sports</li>
             </ol>
         </nav>
 
@@ -270,15 +269,14 @@ $products = [
                     <div class="mb-6 border-b border-gray-100 pb-6">
                         <h3 class="text-sm font-semibold text-gray-900 mb-4">Price Range</h3>
                         <div class="relative w-full mb-2">
-                            <!-- Mock dual slider visual -->
                             <div class="h-1 bg-gray-200 rounded-full w-full absolute top-1.5"></div>
                             <div class="h-1 bg-brand rounded-full w-1/2 absolute top-1.5 left-1/4"></div>
-                            <input type="range" min="500" max="150000" value="500" class="w-full absolute top-0 opacity-0 cursor-pointer">
-                            <input type="range" min="500" max="150000" value="75000" class="w-full appearance-none bg-transparent relative z-10 pointer-events-none">
+                            <input type="range" min="30" max="3000" value="30" class="w-full absolute top-0 opacity-0 cursor-pointer">
+                            <input type="range" min="30" max="3000" value="1500" class="w-full appearance-none bg-transparent relative z-10 pointer-events-none">
                         </div>
                         <div class="flex justify-between text-xs text-gray-600 mt-4">
-                            <span>₹500</span>
-                            <span>₹1,50,000</span>
+                            <span>$30</span>
+                            <span>$3,000</span>
                         </div>
                     </div>
 
@@ -332,8 +330,8 @@ $products = [
                 <!-- Toolbar -->
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                     <div>
-                        <h1 class="text-2xl font-bold text-gray-900">Electronics</h1>
-                        <p class="text-sm text-gray-500 mt-1">Discover aluminum and recyclable electronics from verified sellers.</p>
+                        <h1 class="text-2xl font-bold text-gray-900">Sports</h1>
+                        <p class="text-sm text-gray-500 mt-1">Discover high-end and pre-owned sports equipment for your next adventure.</p>
                     </div>
                     
                     <div class="flex items-center space-x-4">
@@ -350,7 +348,7 @@ $products = [
                         <!-- Sort Dropdown -->
                         <div class="relative">
                             <select class="block w-full pl-3 pr-10 py-2 text-sm bg-white border border-gray-200 rounded-md shadow-sm focus:outline-none focus:ring-brand focus:border-brand appearance-none font-medium">
-                                <option>Newest First</option>
+                                <option>Most Recent</option>
                                 <option>Price: Low to High</option>
                                 <option>Price: High to Low</option>
                             </select>
